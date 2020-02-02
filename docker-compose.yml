@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  database:
+    image: postgres
+    container_name: postgres_db
+    volumes:
+       - pgdata:/var/lib/postgresql/data
+
+  app:
+    build: .
+    container_name: spring-boot-docker
+    ports:
+      - "5001:8080"
+    links:
+     - database
+    environment:
+      - PGPASSWORD=password
+      - PGUSER=postgres
+      - PGDATABASE=world_db
+      - PGHOST=database
+      - PGPORT=5432
+    depends_on:
+      - database
+
+volumes:
+  pgdata: {}
