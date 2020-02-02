@@ -5,7 +5,7 @@
 * docker cp .\world.sql postgres_db:/
 * docker exec -it postgres_db psql -U postgres -c "CREATE DATABASE world_db"
 * docker exec -it postgres_db psql -U postgres -f world.sql world_db
-* docker exec -it java -jar app.jar
+* docker exec -it spring-boot-docker java -jar app.jar
 
 # To run it localy not in docker container run the following command in the project directory
 * ./mvnw spring-boot:run
