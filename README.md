@@ -11,5 +11,3 @@
 * ./mvnw spring-boot:run
 
 # The database reference found here  https://github.com/ghusta/docker-postgres-world-db
-
-# Please Don't forget to configure the DATABASE connection with the application, please check db.conf file and change the database configuration for your environment
